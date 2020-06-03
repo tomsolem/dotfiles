@@ -8,12 +8,23 @@ alias kp="docker run -it --rm -v ${HOME}dev/github/bkk-digitek/kubernetes/ace-pr
 
 export ZSH="/Users/tomso/.oh-my-zsh"
 
-ZSH_THEME="awesomepanda"
+# Golang setup
+export GOPATH=$HOME/Go
+export GOROOT=/usr/local/opt/go/libexec
+export GOPRIVATE=github.com/bkk-digitek
+export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:$GOROOT/bin
 
-# HIST_STAMPS="dd.mm.yyyy"
+#export GOPATH="${HOME}/.go"
+#export GOROOT="$(brew --prefix golang)/libexec"
+#export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
+
+ZSH_THEME="cloud"
+
+HIST_STAMPS="dd.mm.yyyy"
 
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
-
+cd dev/github/bkk-digitek

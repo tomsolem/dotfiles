@@ -4,7 +4,8 @@ echo 'starting script..'
 #echo 'git found, checking next'
 
 if command -v git > /dev/null; then
- echo 'git installed'
+ echo 'git installed, version'
+ git --version
 else
  echo 'git NOT installed'
 fi
@@ -18,7 +19,8 @@ else
 fi
 
 if command -v docker > /dev/null; then
- echo 'Docker installed'
+ echo 'Docker installed, version'
+ docker --version
 else
  echo 'Docker not installed, installing using brew'
   brew cask install docker
@@ -34,4 +36,22 @@ then
 else 
  echo 'iTerm2 installed' 
 fi
-# sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+if command -v code > /dev/null; then
+ echo "Visual studio code installed."
+else
+ echo "Visual studio code NOT installed, running brew cask install..."
+ brew cask install visual-studio-code 
+fi
+
+if command -v go > /dev/null; then
+ echo "golang installed."
+ go version
+else
+ echo "golang NOT installed, create dirs and running brew install go"
+ mkdir -p $HOME/go
+ mkdir -p $HOME/go/src/github.com/user
+
+ brew install go
+# go get golang.org/x/tools/cmd/godoc
+fi
