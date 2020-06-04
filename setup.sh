@@ -55,3 +55,13 @@ else
  brew install go
 # go get golang.org/x/tools/cmd/godoc
 fi
+
+if [ ! -d '/Applications/postman.app' -a ! -d "$HOME/Applications/postman.app" ]
+then
+ echo 'postman not installed, using brew cask to install'
+ brew cask install postman
+else 
+ echo 'postman installed' 
+fi
+
+
