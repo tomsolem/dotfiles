@@ -37,8 +37,19 @@ else
  echo 'iTerm2 installed' 
 fi
 
+if command -v terraform > /dev/null; then
+  echo "terraform installed"
+else
+  brew install terraform
+fi
+
 if command -v code > /dev/null; then
  echo "Visual studio code installed."
+ #code --install-extension hashicorp.terraform --force
+ #brew install tflint
+ curl -fsSL https://github.com/hashicorp/vscode-terraform/releases/download/v2.0.0-rc.2/terraform-2.0.0-rc.2.vsix -O
+ code --install-extension terraform-2.0.0-rc.2.vsix --force
+ rm terraform-2.0.0-rc.2.vsix
 else
  echo "Visual studio code NOT installed, running brew cask install..."
  brew cask install visual-studio-code 
@@ -64,4 +75,10 @@ else
  echo 'postman installed' 
 fi
 
-
+if command -v gpg > /dev/null; then
+echo "gpg installed"
+gpg --version
+else
+echo "gpg not installed, installing with brew cask"
+brew cask install gpg-suite
+fi
