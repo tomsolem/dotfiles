@@ -82,3 +82,22 @@ else
 echo "gpg not installed, installing with brew cask"
 brew cask install gpg-suite
 fi
+
+if [ ! -d '/Applications/Notable.app' -a ! -d "$HOME/Applications/Notable.app" ]
+then
+echo "notable installed"
+
+else
+echo "installing notable"
+brew cask install notable
+fi
+
+if [ ! -d '/Applications/Chrome.app' -a ! -d "$HOME/Applications/Chrome.app" ]
+then
+echo "chrome installed"
+
+else
+echo "installing chrome"
+brew cask install google-chrome
+fi
+# 
