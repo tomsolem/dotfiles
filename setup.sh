@@ -80,7 +80,8 @@ echo "gpg installed"
 gpg --version
 else
 echo "gpg not installed, installing with brew cask"
-brew cask install gpg-suite
+brew install gnupg
+# setup: https://blog.ghostinthemachines.com/2015/03/01/how-to-use-gpg-command-line/
 fi
 
 if [ ! -d '/Applications/Notable.app' -a ! -d "$HOME/Applications/Notable.app" ]

@@ -31,6 +31,7 @@ code --install-extension vscode-icons-team.vscode-icons
 code --install-extension henoc.svgeditor
 #code --install-extension redhat.vscode-xml --> BAD needs java
 code --install-extension dotjoshjohnson.xml
+code --install-extension hashicorp.terraform
 
 
 # copy vscode settings

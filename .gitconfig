@@ -2,6 +2,7 @@
 [user]
 # Please adapt and uncomment the following lines:
 	name = Tom Solem
-	email = tom.solem@gmail.com
+	email = tom.solem@bkk.no
+	
 [push]
 	default = current
