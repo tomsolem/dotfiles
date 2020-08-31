@@ -18,6 +18,14 @@ export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOROOT/bin
 export NETRC=$(cat ~/.netrc)
 
+export GPG_TTY=$(tty)
+
+if [ -f “${HOME}/.gpg-agent-info” ]; then
+. “${HOME}/.gpg-agent-info”
+export GPG_AGENT_INFO
+export SSH_AUTH_SOCK
+fi
+
 ZSH_THEME="cloud"
 
 HIST_STAMPS="dd.mm.yyyy"

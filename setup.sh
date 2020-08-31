@@ -80,7 +80,7 @@ echo "gpg installed"
 gpg --version
 else
 echo "gpg not installed, installing with brew cask"
-brew install gnupg
+brew install gpg2 gnupg pinentry-mac
 # setup: https://blog.ghostinthemachines.com/2015/03/01/how-to-use-gpg-command-line/
 fi
 
