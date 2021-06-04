@@ -102,3 +102,19 @@ echo "installing chrome"
 brew cask install google-chrome
 fi
 # 
+
+if [ ! -d '/Applications/inskape.app' -a ! -d "$HOME/Applications/inkscape.app" ]
+then
+echo "Inscape installed"
+
+else
+echo "installing chrome"
+brew cask install inkscape
+fi
+
+if command -v kind > /dev/null; then
+echo "kind installed"
+kind --version
+else
+echo "kind not installed, installing with brew"
+brew install kind
