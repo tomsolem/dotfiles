@@ -1,0 +1,5 @@
+#!/bin/bash
+test -n "$1" || {​ echo no tag provided; exit 1; }​
+git push origin :refs/tags/$1 || echo old tag not found
+git tag -f $1
+git push origin $1

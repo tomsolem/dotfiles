@@ -17,3 +17,6 @@ xcode-select --install
 ```
 
 Then we should check to see if brew is installed and install it? -> start to create a dotfile script.
+
+Font for vs code:
+https://www.marksimonson.com/fonts/view/anonymous-pro

@@ -2,7 +2,17 @@
 [user]
 # Please adapt and uncomment the following lines:
 	name = Tom Solem
-	email = 
+	email = tom.solem@eviny.no
 	
 [push]
 	default = current
+[gpg]
+	program = gpg
+[commit]
+	gpgsign = true
+[tag]
+	forceSignAnnotated = true
+[init]
+	defaultBranch = main
+[pull]
+	rebase = true
